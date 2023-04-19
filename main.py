@@ -41,8 +41,7 @@ class KMeans():
 
             new_centroids = self.centroid_update()
 
-            if self.converged(centroids, new_centroids):
-                break
+            if self.converged(centroids, new_centroids): break
             pass
 
 
