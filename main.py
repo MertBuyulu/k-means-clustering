@@ -4,6 +4,7 @@ import pandas as pd
 import requests
 import re
 import string
+import random
 
 class KMeans():
     def __init__(self, dataUrl):
@@ -35,18 +36,46 @@ class KMeans():
             centroids.append(self.procesed_input[i])
 
         for iter in iterations:
+            # clusters is a dictionary that will hold the centroid as the key and a list of the tweets in the cluster
+            clusters, sse = self.cluster_assignment(centroids)
 
+            new_centroids = self.centroid_update()
+
+            if self.converged(centroids, new_centroids):
+                break
             pass
 
 
-    def converged(self):
+    # convergence check
+    def converged(self, centroids, new_centroids):
         pass
 
-    def cluster_assignment(self):
-        cluster_dict = dict()
-        for tweet in self.procesed_input:
-            pass
+    # cluster assignment step
+    def cluster_assignment(self, centroids):
+        clusters = {new_list: [] for new_list in centroids}
+        sse = {val: 0 for val in self.procesed_input}
 
+        for tweet in self.procesed_input:
+            minimum_distance = 1
+            minimum_centroid = None
+
+            for centroid in centroids:
+                distance = self.jaccard(tweet, centroid)
+                if distance < minimum_distance:
+                    minimum_distance = distance
+                    minimum_centroid = centroid
+
+            # random assignment of centroid if 0 similarity
+            if minimum_distance == 1:
+                minimum_centroid = random.choice(centroids)
+            
+            clusters[minimum_centroid].append(tweet)
+            sse[tweet] = minimum_distance ** 2
+            
+        return clusters, sse
+
+    # updates centroids after assignment
+    def centroid_update(self):
         pass
 
 if __name__ == "__main__":
