@@ -39,59 +39,59 @@ Running the `main.py` file will run the K-means algorithm on 5 values of k and o
 
 ```text
 K = 4
-SSE = 5511.9778996771
-1 - 310 tweets
-2 - 2126 tweets
-3 - 1443 tweets
-4 - 2366 tweets
+SSE = 5050.767820672383
+1 - 1483 tweets
+2 - 1573 tweets
+3 - 2087 tweets
+4 - 1102 tweets
 
 K = 6
-SSE = 5440.033056238194
-1 - 1165 tweets
-2 - 1814 tweets
-3 - 155 tweets
-4 - 2051 tweets
-5 - 710 tweets
-6 - 350 tweets
+SSE = 4985.704899150557
+1 - 676 tweets
+2 - 982 tweets
+3 - 1031 tweets
+4 - 1693 tweets
+5 - 847 tweets
+6 - 1016 tweets
 
 K = 8
-SSE = 5156.698059849712
-1 - 323 tweets
-2 - 577 tweets
-3 - 516 tweets
-4 - 1049 tweets
-5 - 513 tweets
-6 - 1901 tweets
-7 - 620 tweets
-8 - 746 tweets
+SSE = 4823.565367902651
+1 - 170 tweets
+2 - 598 tweets
+3 - 675 tweets
+4 - 1248 tweets
+5 - 614 tweets
+6 - 1521 tweets
+7 - 912 tweets
+8 - 507 tweets
 
 K = 10
-SSE = 5132.448962681637
-1 - 902 tweets
-2 - 1867 tweets
-3 - 62 tweets
-4 - 516 tweets
-5 - 160 tweets
-6 - 396 tweets
-7 - 499 tweets
-8 - 152 tweets
-9 - 639 tweets
-10 - 1052 tweets
+SSE = 4800.232817740847
+1 - 505 tweets
+2 - 769 tweets
+3 - 204 tweets
+4 - 942 tweets
+5 - 88 tweets
+6 - 363 tweets
+7 - 931 tweets
+8 - 881 tweets
+9 - 1023 tweets
+10 - 539 tweets
 
 K = 12
-SSE = 5077.87964474145
-1 - 426 tweets
-2 - 2008 tweets
-3 - 404 tweets
-4 - 187 tweets
-5 - 495 tweets
-6 - 531 tweets
-7 - 50 tweets
-8 - 468 tweets
-9 - 464 tweets
-10 - 282 tweets
-11 - 531 tweets
-12 - 399 tweets
+SSE = 4798.379175879579
+1 - 449 tweets
+2 - 656 tweets
+3 - 362 tweets
+4 - 885 tweets
+5 - 337 tweets
+6 - 329 tweets
+7 - 608 tweets
+8 - 1432 tweets
+9 - 365 tweets
+10 - 664 tweets
+11 - 61 tweets
+12 - 97 tweets
 ```
 
 The values of k can be changed from within the main function, and the number of iterations is set to 300 by default but can be raised or lowered in the main function. A lower SSE value signifies better algorithm performance. SSE varies depending on the size of the dataset and the number of clusters (k) and iterations.

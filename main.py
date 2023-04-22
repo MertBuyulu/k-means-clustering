@@ -98,7 +98,7 @@ class KMeans():
             for index1, tweet1 in enumerate(clusters[centroid]):
                 for index2, tweet2 in enumerate(clusters[centroid]):
                     # only calculate the distance if it hasn't already been calculated
-                    if distance_matrix[index1][index2] == math.inf:
+                    if distance_matrix[index1][index2] == -1:
                         distance = self.jaccard(tweet1, tweet2)
                         distance_matrix[index1][index2] = distance
                         distance_matrix[index2][index1] = distance
